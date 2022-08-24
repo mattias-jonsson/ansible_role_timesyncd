@@ -16,7 +16,7 @@ None.
 Role Variables
 --------------
 
-Available variables are listed below, along with default values where applicable (see defaults/main.yml):
+Available variables are listed below, along with default values where applicable (see `defaults/main.yml`):
 
     ansible_role_timesyncd_connectionretrysec: 30
 
@@ -28,7 +28,7 @@ A list of NTP server host names or IP addresses to be used as the fallback NTP s
 
     ansible_role_timesyncd_pollintervalmaxsec: 2048
 
-The maximum poll intervals for NTP messages. The default unit is seconds, default value is 2048 seconds and it must be larger than ansible_role_timesyncd_pollintervalminsec.
+The maximum poll intervals for NTP messages. The default unit is seconds, default value is 2048 seconds and it must be larger than `ansible_role_timesyncd_pollintervalminsec`.
 
     ansible_role_timesyncd_pollintervalminsec: 32
 
