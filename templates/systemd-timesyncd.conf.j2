@@ -1,0 +1,11 @@
+# {{ ansible_managed }}
+
+[Time]
+NTP={{ ansible_role_timesyncd_time_servers | join(' ') | default(omit) }}
+FallbackNTP={{ ansible_role_timesyncd_fallback_time_servers | join(' ') | default(omit) }}
+RootDistanceMaxSec={{ ansible_role_timesyncd_rootdistancemaxsec }}
+PollIntervalMinSec={{ ansible_role_timesyncd_pollintervalminsec }}
+PollIntervalMaxSec={{ ansible_role_timesyncd_pollintervalmaxsec }}
+{% if ansible_distribution == "Ubuntu" and ansible_distribution_major_version == "22" %}
+ConnectionRetrySec={{ ansible_role_timesyncd_connectionretrysec }}
+{% endif %}

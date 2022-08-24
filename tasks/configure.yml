@@ -1,0 +1,18 @@
+---
+
+- name: install timesyncd configuration from template
+  become: true
+  ansible.builtin.template:
+    src: 'systemd-timesyncd.conf.j2'
+    dest: '{{ ansible_role_timesyncd_configfile }}'
+    owner: root
+    group: root
+    mode: '0644'
+  notify: restart timesyncd daemon
+
+- name: ensure that timesyncd is configured to run and is running
+  become: true
+  ansible.builtin.service:
+    name: '{{ ansible_role_timesyncd_daemon }}'
+    enabled: yes
+    state: started

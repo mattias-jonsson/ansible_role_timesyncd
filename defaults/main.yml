@@ -1,0 +1,8 @@
+---
+
+ansible_role_timesyncd_time_servers: []
+ansible_role_timesyncd_fallback_time_servers: []
+ansible_role_timesyncd_rootdistancemaxsec: 5
+ansible_role_timesyncd_pollintervalminsec: 32
+ansible_role_timesyncd_pollintervalmaxsec: 2048
+ansible_role_timesyncd_connectionretrysec: 30

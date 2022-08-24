@@ -1,0 +1,6 @@
+---
+
+ansible_role_timesyncd_packages:
+  - systemd
+ansible_role_timesyncd_daemon: systemd-timesyncd
+ansible_role_timesyncd_configfile: /etc/systemd/timesyncd.conf

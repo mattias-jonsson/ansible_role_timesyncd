@@ -1,0 +1,17 @@
+---
+
+galaxy_info:
+  author: Mattias Jonsson
+  description: Ansible role that configures timesync on supported Linux distributions.
+  min_ansible_version: 2.9.27
+  role_name: ansible_role_timesync
+  license: MIT
+  platforms:
+  - name: Ubuntu
+    versions:
+    - bionic
+    - focal
+    - jammy
+  - name: Debian
+    versions:
+    - "bullseye"
