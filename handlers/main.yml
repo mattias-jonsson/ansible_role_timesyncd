@@ -1,6 +1,6 @@
 ---
 
-- name: restart timesyncd daemon
+- name: Restart timesyncd daemon
   become: true
   ansible.builtin.service:
     name: '{{ ansible_role_timesyncd_daemon }}'
